@@ -1,4 +1,5 @@
 version: '3.8'
+
 services:
   redis:
     image: redis:7.0.4-alpine
@@ -10,7 +11,9 @@ services:
       - cache:/data
 
   api:
+    image: pedrogoncalvesk/health-api
     container_name: api
+    platform: linux/amd64
     build: .
     restart: always
     ports:
