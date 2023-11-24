@@ -21,7 +21,6 @@ services:
       - "${WALLET_PATH}:/app/wallet"
       - .env:/app/.env
 
-
 volumes:
   cache:
     driver: local
