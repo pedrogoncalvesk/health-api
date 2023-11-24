@@ -1,0 +1,17 @@
+{
+  "parameterHints.hintingType": "variableOnly",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "eslint.validate": [
+    "javascript"
+  ],
+  "cSpell.words": [
+    "oracledb",
+    "TYPEORM",
+    "usecase"
+  ]
+}

@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  redis:
+    image: redis:7.0.4-alpine
+    restart: always
+    command: redis-server --save 20 1 --loglevel warning --requirepass r123 --appendonly yes
+    ports:
+      - "6379:6379"
+    volumes:
+      - cache:/data
+
+  api:
+    container_name: api
+    build: .
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - "${WALLET_PATH}:/app/wallet"
+      - .env:/app/.env
+
+
+volumes:
+  cache:
+    driver: local
